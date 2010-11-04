@@ -1,0 +1,13 @@
+{% load thumbnail %}
+
+<div class="dossier">
+	{% if dossier.photo %}
+		<div class="photo">
+			<img src="{% thumbnail dossier.photo 180x240 crop sharpen %}" alt="{{ dossier.name }}" />
+		</div>
+	{% endif %}
+	<div class="text">
+		<div class="name">{{ dossier.name }}</div>
+		<div class="description">{{ dossier.description }}</div>
+	</div>
+</div>
