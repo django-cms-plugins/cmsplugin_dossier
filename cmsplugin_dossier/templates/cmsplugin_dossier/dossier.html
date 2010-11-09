@@ -8,7 +8,7 @@
 	{% endif %}
 	<div class="text">
 		<div class="name">{{ dossier.name }}</div>
-		<div class="description">{{ dossier.description }}</div>
+		<div class="description">{{ dossier.description|safe }}</div>
 	</div>
 </div>
 
