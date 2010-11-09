@@ -10,6 +10,9 @@ class CMSDossierPlugin(CMSPluginBase):
     name = _('Dossier')
     render_template = 'cmsplugin_dossier/dossier.html'
     
+    class PluginMedia:
+        js = ('js/cmsplugin_dossier.js', )
+    
     def render(self, context, instance, placeholder):
         context.update({'dossier': instance})
         return context

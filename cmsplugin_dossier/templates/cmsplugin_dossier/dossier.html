@@ -2,12 +2,19 @@
 
 <div class="dossier">
 	{% if dossier.photo %}
-		<div class="photo">
-			<img src="{% thumbnail dossier.photo 180x240 crop sharpen %}" alt="{{ dossier.name }}" />
+		<div class="dossierPhoto" rel="#dossierPhotoOverlay{{ dossier.pk }}">
+			<img src="{% thumbnail dossier.photo 160x180 crop sharpen %}" alt="{{ dossier.name }}" />
 		</div>
 	{% endif %}
 	<div class="text">
 		<div class="name">{{ dossier.name }}</div>
 		<div class="description">{{ dossier.description }}</div>
+	</div>
+</div>
+
+<div class="simple_overlay dossierPhotoOverlay" id="dossierPhotoOverlay{{ dossier.pk }}">
+	<img src="{{ dossier.photo.url }}" alt="{{ dossier.name }}" />
+	<div class="details">
+		<p>{{ dossier.name }}</p>
 	</div>
 </div>

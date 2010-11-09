@@ -1,3 +1,6 @@
 .project
 .pydevproject
 *.pyc
+.tmp*
+cmsplugin_dossier.egg-info/
+dist/
