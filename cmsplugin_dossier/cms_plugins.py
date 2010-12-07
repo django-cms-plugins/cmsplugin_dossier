@@ -10,7 +10,6 @@ class CMSDossierPlugin(CMSPluginBase):
     model = models.DossierPlugin
     name = _('Dossier')
     render_template = 'cmsplugin_dossier/dossier.html'
-    search_fields = ('name', 'description',)
     
     class PluginMedia:
         js = ('js/cmsplugin_dossier.js', )
